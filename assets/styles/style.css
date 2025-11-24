@@ -1,0 +1,277 @@
+:root {
+  --verde: #466E38;
+  --fundo: #F5F7FA;
+  --cinza: #CFCFCF;
+  --texto: #383737;
+  --verdeclaro: #56BF31;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.freckle-face-regular {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0px;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--azul);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--cinza);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 65px;
+}
+
+main {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+    background: url('../images/fundo.png') center/cover no-repeat;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.home::before{
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+.home-info {
+    display: flex;
+    padding: 75px 120px;
+    gap: 100px;
+}
+
+.home-info div{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 18px;
+}
+
+.menu {
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1{
+    font-family: 'Freckle Face', cursive;
+    font-size: 70px;
+    color: var(--verde);
+}
+
+h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+p{
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+hr{
+    border: 1px solid var(--cinza);
+    width: 100%;
+}
+
+#home-buttons {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+  gap: 10px;
+  border-radius: 10px;
+  font-family: "jost", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+    cursor: pointer;
+}
+
+#btn-primary {
+  background-color: var(--verde);
+  color: white;
+  border: var(--verde) 2px solid;
+  
+}
+
+#btn-primary:hover {
+  background-color: var(--verdeclaro);
+  border: var(--verdeclaro) 2px solid;
+}
+
+#btn-secondary {
+  background-color: white;
+  color: var(--verde);
+  border: var(--verde) 2px solid;
+}
+
+
+.btn-dashboard {
+  background-color: #455A64;
+  color: white;
+}
+
+.sobrenos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 76px 97px;
+  text-align: center;
+  gap: 55px;
+}
+
+#texto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 750px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    border: 2px solid var(--cinza);
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 400px;
+    transition: .4s ease;
+}
+.card img{
+    height: 170px;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 2rem;
+    gap: 15px;
+}
+.card:hover {
+    filter: drop-shadow(0px 13px 26px rgba(0, 0, 0, 0.17));
+    border: var(--verdeclaro) 2px solid;
+}
+
+.card:hover hr{
+    border: 1px solid var(--verdeclaro);
+    width: 100%;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+    height: 170px;
+    margin-bottom: 15px;
+}
+
+.funcionalidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 76px 97px;
+    text-align: center;
+    gap: 55px;
+    background: rgba(217, 217, 217, 0.27);
+}
+
+#card-funcionalidade {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#container-funcionalidades {
+    gap: 150px;
+}
+
+div {
+    overflow: hidden;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--cinza);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,197 @@
+:root {
+  --verde: #466E38;
+  --fundo: #F5F7FA;
+  --cinza: #CFCFCF;
+  --texto: #383737;
+  --verdeclaro: #56BF31;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 26px;
+  box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+  backdrop-filter: blur(7px);
+}
+
+#formAvaliacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box-info {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 50px;
+  gap: 25px;
+  border: var(--cinza) 2px solid;
+  background-color: var(--fundo);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.textos h2 {
+  color: var(--verde);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.textos p {
+  color: var(--texto);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.avaliacao-container {
+  background: white;
+  border-radius: 26px;
+  padding: 2.5rem;
+  max-width: 850px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+  backdrop-filter: blur(7px);
+}
+
+/* Título da página */
+.avaliacao-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--verde);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Card com dados da vaca */
+.card-vaca-info {
+  background: var(--fundo);
+  border-left: 5px solid var(--verdeclaro);
+  padding: 1.5rem;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+}
+
+.card-vaca-info h3 {
+  color: var(--verde);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.vaca-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
+
+.vaca-info-item {
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.vaca-info-item span {
+  font-weight: 600;
+  color: var(--verde);
+}
+
+/* Sintomas estilo lista */
+.sintomas-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.sintomas-lista label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+/* Checkbox estilizado */
+.sintomas-lista input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--verdeclaro);
+}
+
+/* textarea */
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--cinza);
+  padding: 12px;
+  border-radius: 14px;
+  font-family: "Jost", sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--verdeclaro);
+}
+
+/* Botão salvar */
+.btn-salvar {
+  width: 100%;
+  background: var(--verde);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 14px;
+  font-weight: 600;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-salvar:hover {
+  background: var(--verdeclaro);
+}
+
+/* Container das pílulas */
+/* Container das pills */
+.sintomas-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 22px 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .vaca-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sintomas-lista {
+    grid-template-columns: 1fr;
+  }
+}

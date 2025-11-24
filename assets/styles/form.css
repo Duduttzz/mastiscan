@@ -1,0 +1,142 @@
+
+:root {
+  --verde: #466E38;
+  --fundo: #F5F7FA;
+  --cinza: #CFCFCF;
+  --texto: #383737;
+  --verdeclaro: #56BF31;
+}
+
+.form-container {
+  background-color: white;
+  backdrop-filter: blur(7px);
+  padding: 3rem;
+  border-radius: 26px;
+  -webkit-box-shadow: 0 4px 35px rgba(0,0,0,.1);
+  box-shadow: 0 4px 35px rgba(0,0,0,.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--azul);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input, select {
+  font-weight: 300;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--verdeclaro);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: var(--verdeclaro);
+  outline: none;
+}
+
+input:focus + .underline {
+  transform: scaleX(1);
+}
+
+button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mensagem {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  display: none;
+}
+
+.mensagem.sucesso {
+  color: var(--verde);
+  display: block;
+}
+
+.mensagem.erro {
+  color: var(--vermelho);
+  display: block;
+}
+
+/* ==============================
+   🔔 ALERTAS DE STATUS
+============================== */
+.alerta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: aparecer 0.4s ease-out;
+}
+
+.alerta i {
+  width: 20px;
+  height: 20px;
+}
+
+.alerta.sucesso {
+  background-color: #E8F5E9;
+  color: var(--verde);
+  border: 1px solid #A5D6A7;
+}
+
+.alerta.erro {
+  background-color: #FFEBEE;
+  color: var(--vermelho);
+  border: 1px solid #EF9A9A;
+}
+
+.alerta.oculto {
+  display: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

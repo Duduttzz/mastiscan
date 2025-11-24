@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Vaca - MastiScan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="../assets/styles/form.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <img class="logo" src="../assets/images/logo.svg" alt="Logo MastiScan">
+    </div>
+  </header>
+
+ <main>
+  <section class="form-container">
+    <h2></i> Cadastrar Nova Vaca</h2>
+
+    <!-- ✅ Aviso de status -->
+    <div id="alerta" class="alerta oculto">
+      <i data-lucide="info"></i>
+      <span id="mensagem"></span>
+    </div>
+
+    <form id="formCadastroVaca">
+      <div class="form-group">
+        <label for="nome">Nome da Vaca</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Mimosa" required />
+        <span class="underline"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="identificacao">Identificação / Brinco</label>
+        <input type="text" id="identificacao" name="identificacao" placeholder="Ex: VAC-001" required />
+      </div>
+
+      <div class="form-group">
+        <label for="raca">Raça</label>
+        <input type="text" id="raca" name="raca" placeholder="Ex: Holandesa" />
+      </div>
+
+      <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" />
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status de Saúde</label>
+        <select id="status" name="status">
+          <option value="Saudável">🟢 Saudável</option>
+          <option value="Suspeita de Mastite">🟡 Suspeita de Mastite</option>
+          <option value="Com Mastite">🔴 Com Mastite</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn" id="btn-primary">
+        <i data-lucide="save"></i> Salvar Cadastro
+      </button>
+    </form>
+  </section>
+</main>
+
+
+  <footer>
+    <p>🐄 MastiScan © 2025</p>
+  </footer>
+
+  <script src="../scripts/supabaseClient.js" type="module"></script>
+  <script src="../scripts/vacas.js" type="module"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

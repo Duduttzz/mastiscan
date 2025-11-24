@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MastiScan - Lista de Vacas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="../assets/styles/lista.css">
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img class="logo" src="../assets/images/logo.svg" alt="Logo MastiScan">
+    </div>
+  </header>
+
+  <main>
+    <section class="list-section">
+      <div class="list-header">
+        <h2>Lista de Vacas</h2>
+        <div class="actions">
+        <a href="cadastro.html" class="btn btn-primary">
+          <i data-lucide="plus-circle"></i> Cadastrar Nova
+        </a>
+        <a href="../index.html" class="btn btn-secondary">
+          <i data-lucide="home"></i> Voltar ao Início
+        </a>
+      </div>
+      </div>
+
+      <div class="table-container">
+        <table id="tabela-vacas">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Raça</th>
+              <th>Idade</th>
+              <th>Último Diagnóstico</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5" class="loading">Carregando vacas...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>🐄 Desenvolvido por Eduardo - MastiScan © 2025</p>
+  </footer>
+
+  <script type="module" src="../scripts/vacas.js"></script>
+  <script>lucide.createIcons();
+
+    window.avaliacaoVaca = function(id) {
+  // redireciona para a página de avaliação, passando id
+  window.location.href = `avaliacao.html?id=${id}`;
+};
+  </script>
+</body>
+</html>
